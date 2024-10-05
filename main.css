@@ -123,7 +123,7 @@ figcaption {
 	padding: 30px;
 	/* font-weight: bold; */
 	font-size: 250%;
-	background-image: url("/img/zorza2.jpg");
+	background-image: url("img/zorza2.jpg");
 	background-size: 100% 100%;
 	color: var(--text);
 	border-radius: 10px;
