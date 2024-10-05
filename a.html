@@ -1,0 +1,96 @@
+<?php
+	$output="";
+	$file="";
+	if(!isset($_GET['p']))
+		$_GET['p']="index";
+	$file="pages/".$_GET['p'].".xml";
+	if(file_exists($file)){
+		$output="OK";
+		$xml=simplexml_load_file($file) or die("Error: Cannot create object");
+	}
+	else
+		$output='<div style="color:red">File '.$file.' not found!</div>';
+?>
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="main.css">
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<title><?php if($output =="OK"){echo $xml->title;}else{echo "XML error";}?></title>
+</head>
+
+<body>
+	<div id="page">
+		<a href="?">
+			<div id="baner">STRONA JACKA</div>
+		</a>
+		<div class="container-fluid sticky-top">
+			<div class="row">
+				<div class="col-12 col-md-6 col-lg-1">
+					<a href="?">
+						<div class="menu"><img src="rsc/home.svg" alt="strona główna" style="height: 24px;"></div>
+					</a>
+				</div>
+				<div class="col-12 col-md-6 col-lg-3 omenu">
+					<div class="menu">Projekty &#x25BC;</div>
+					<div class="dmenu">
+						<ul class="lmenu">
+								<li class="menu">
+									<a href="?p=projects#nukleo">Rozpad 2p+ 45Fe</a>
+								</li>
+								<li class="menu">
+									<a href="?p=projects#nic">Czy może istnieć nic?</a>
+								</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-12 col-md-6 col-lg-2">
+					<a href="?p=books">
+						<div class="menu">Książki</div>
+					</a>
+				</div>
+				<div class="col-12 col-md-6 col-lg-2">
+					<a href="?p=images">
+						<div class="menu">Zdjęcia</div>
+					</a>
+				</div>
+				<div class="col-12 col-md-6 col-lg-2">
+					<a href="?p=programs">
+						<div class="menu">Programy</div>
+					</a>
+				</div>
+				<div class="col-12 col-md-6 col-lg-2">
+					<a href="?p=contact">
+						<div class="menu">Kontakt</div>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div id="text">
+<?php
+	if($output=="OK"){
+		require_once("pages/".html_entity_decode($xml->file));
+		echo "\n";
+	}
+	else{
+		echo $output;
+	}
+?>
+		</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+		integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+		crossorigin="anonymous"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="src/bootstrap.min.js"></script>
+</body>
+
+</html>

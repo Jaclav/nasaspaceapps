@@ -1,0 +1,36 @@
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* width: 50%; */
+  text-align: center;
+  /* font-size: small; */
+}
+
+.description {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* width: 50%; */
+  text-align: center;
+  font-size: small;
+  margin-bottom: 30px;
+}
+
+ /* Three image containers (use 25% for four, and 50% for two, etc) */
+ .column {
+  float: left;
+  width: 50%;
+  padding: 5px;
+  text-align: center;
+  vertical-align: top;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.centered{width: 50%; margin: 0px, auto, 0px, auto;}
+.centered3{width: 33.3%; margin: 0px, auto, 0px, auto;}

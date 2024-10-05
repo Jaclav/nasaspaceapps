@@ -1,0 +1,33 @@
+.download {
+	display: inline-block;
+	min-width: 20%;
+	background-color: var(--use);
+	color: var(--text);
+	padding: 0.5% 7px 0.5% 0.5%;
+	border-radius: 7px;
+	text-align: center;
+	cursor: pointer;
+	margin: 8px 8px 8px 0px;
+}
+
+.download a {
+	color: var(--text);
+}
+
+.download:hover,
+.download:hover a {
+	background-color: var(--text);
+	color: var(--use);
+}
+
+.download img {
+	width: auto;
+	height: 100%;
+	float: left;
+	filter: brightness(7);
+	margin-right: 5px;
+}
+
+.download:hover img {
+	filter: none;
+}

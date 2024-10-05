@@ -1,0 +1,154 @@
+@import url("src/colors.css");
+@import url("src/download.css");
+@import url("src/a.css");
+@import url("src/table.css");
+@import url("src/font.css");
+@import url("src/menu.css");
+@import url("src/center.css");
+
+body {
+	background-color: var(--bg1) !important;
+	margin: 0px;
+	color: var(--text);
+	font-family: "Computer Modern", sans-serif;
+	text-align: left;
+	color-scheme: dark;
+}
+
+@media (max-width:340px) {
+	body {
+		word-break: break-all;
+	}
+}
+
+fieldset {
+	border: 1px solid var(--text);
+	padding: 10px;
+	color: var(--text);
+	border-radius: 10px;
+}
+
+legend {
+	float: none;
+	width: auto;
+	font-weight: bold;
+	font-size: large;
+}
+
+h1:first-of-type {
+	margin-top: 0px;
+}
+
+h2,
+h1,
+h3,
+h4 {
+	font-weight: bold;
+	margin-top: 20px;
+	margin-bottom: 5px;
+}
+
+
+input,
+textarea {
+	border-radius: 5px;
+	background-color: var(--use);
+	border: 1px solid var(--text);
+	width: 100%;
+}
+
+input:hover,
+textarea:hover {
+	background-color: var(--used);
+}
+
+iframe {
+	width: 100%;
+	height: 70vh;
+}
+
+figure img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+
+figcaption {
+	text-align: center;
+}
+
+#page {
+	margin-left: 15%;
+	margin-right: 15%;
+	min-height: 100vh;
+
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+.sticky-top {
+	opacity: 0.9;
+	background-color: var(--bg1);
+}
+
+@media (max-width:990px) {
+	#page {
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+
+	.sticky-top {
+		position: inherit !important;
+	}
+}
+
+@media (max-width:600px) {
+	#page {
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+}
+
+@media (max-width:470px) {
+	#page {
+		margin-left: 4%;
+		margin-right: 4%;
+	}
+}
+
+#baner {
+	-webkit-text-stroke: 2px #fff;
+	text-align: center;
+	padding: 30px;
+	/* font-weight: bold; */
+	font-size: 250%;
+	background-image: url("/img/zorza2.jpg");
+	background-size: 100% 100%;
+	color: var(--text);
+	border-radius: 10px;
+	text-shadow: rgb(45, 47, 49) 0px 0px 5px, rgb(45, 47, 49) 0px 0px 5px, rgb(255, 177, 17) 0px 0px 15px, rgb(255, 177, 17) 0px 0px 15px, rgb(255, 177, 17) 0px 0px 15px, rgb(255, 177, 17) 0px 0px 15px;
+	margin-bottom: 10px;
+}
+
+#text {
+	padding: 15px;
+	background-color: var(--bg2);
+	border-radius: 10px;
+	margin: 0px;
+}
+
+.grafika img {
+	border-radius: 10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+img {
+	border-radius: 10px;
+}
+
+table,
+video {
+	margin-top: 30px;
+}

@@ -1,0 +1,46 @@
+.mtable .MathJax {
+	font-size: 100% !important;
+}
+
+@media (max-width:600px) {
+	.mtable td mjx-math {
+		display: inline-grid;
+	}
+}
+
+td {
+	padding: 5px;
+	vertical-align: middle;
+}
+
+.mtable {
+	width: 100%;
+	text-align: center;
+}
+
+.mtable th {
+	color: var(--text);
+	font-weight: bold;
+	border: 1px solid var(--use);
+	background-color: var(--used);
+	padding: 5px;
+}
+
+.mtable td {
+	border: 1px solid var(--used);
+}
+
+.mtable tr:nth-child(even) {
+	background-color: var(--use);
+	color: white;
+}
+
+.mtable td:first-child {
+	width: 10px;
+}
+
+@media (max-width:340px) {
+	.mtable td:first-child {
+		width: auto;
+	}
+}
